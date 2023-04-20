@@ -1,0 +1,79 @@
+
+<div class="container-fluid ">
+    <div class="row border ">
+
+        <form  [formGroup]="registForm">
+            <h3 class="reg">Registration-Form </h3>
+            <div class="col-md-8 m-auto d-flex ">
+    
+           
+            <div class="col-md-5 ">
+                <div class="form-group">
+    
+                    <label class="form-label">First Name</label>
+                    <input type="text" name="fname" class="form-control" formControlName="fname">
+                </div>
+                 
+                <div class="form-group">
+                    <label class="form-label"> Last Name</label>
+                    <input type="text" name="lname" class="form-control" formContorolName="lname">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email :</label>
+                    <input type="text" name="email" class="form-control" formControlName="email">
+                </div>
+        
+                <div class="form-group">
+                    <label class="form-label">Phno:</label>
+                    <input type="text" name="phno" class="form-control" formControlName="phno">
+                </div>
+                
+            </div>
+            <div class="col-md-5 m-auto">
+        
+        <div class="form-group">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control" name="dob" formControlName="dob">
+        </div>
+    
+        <div class="form-group">
+            <label class="form-label">Gender :</label>
+            <input type="radio" gender="male" name="gender" formControlName="gender" class="mt-4 mx-3">
+            Male
+            <input type="radio" gender="Female" name="gender" formControlName="gender" class="mx-3">
+            Fe-Male
+        </div>
+    
+        <div>
+        <label class="form-label">Country</label>
+            <select  class="form-select" formControlName="countryId" (change)="getStateBycountryId($any($event.target).value)">
+                <option  selected disabled>countryId</option>
+                <option *ngFor="let country of countryId | keyvalue" [value]="country.key"> {{country.value}}</option>      
+              </select>
+    
+        </div>  
+                    <label class="form-label">State</label>
+                    <select name="" id="" class="form-select" formControlName="countryId" (change)="getCityByStateId($any($event.target).value)"> 
+                    <option selected disabled>Select Satate</option>
+                    <option  *ngFor="let state of stateId | keyvalue "  [value]="state.key">{{state.value}}</option>
+                      
+                
+                </select>
+                        
+                <label class="form-label" >City</label>
+                     <select name="" id="" formControlName="countryId" class="form-select">
+                    <option selected disabled>select city</option>     
+                    <option *ngFor="let city of cityId | keyvalue" [value]="city.key">{{city.value}}</option>
+                
+                     </select>
+                   
+                 <button class="btn btn-secondary mt-4 mb-4" (click)="regUser()">Submit</button>
+                    
+            </div>
+        </div>
+        </form>
+
+       
+    </div>
+</div>

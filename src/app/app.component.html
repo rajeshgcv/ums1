@@ -1,0 +1,100 @@
+
+
+
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LOGO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="[/sign-in]">Sign-in</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registration</a>
+          </li>
+
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">Unlock-acc</a>
+          </li>
+                    
+          <li class="nav-item">
+            <a class="nav-link" href="#">Forgot-password</a>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+  </nav> -->
+  
+
+  <nav class="main">
+   
+    <div class="logo">
+      <img class="img1" src="../assets/image/360_F_518266508_88PE7n9461bvCqCwEgwG42Q53Oxu6GZ1.jpg" alt="">
+    </div>
+   
+    <div class="unorlist">
+
+    <ul class="ul">
+      <li><a [routerLink]="['sign-in']" data-bs-toggle="modal" data-bs-target="#exampleModal"  >SignIn</a></li>
+      <li><a [routerLink]="['registration']" data-bs-toggle="modal" data-bs-target="#exampleModal">Registration</a></li>
+      <li><a [routerLink]="['forgot-pswd']" data-bs-toggle="modal" data-bs-target="#exampleModal">ForgotPass</a></li>
+      <li><a [routerLink]="['UnlockAcc']" data-bs-toggle="modal" data-bs-target="#exampleModal">UnlockAcc</a></li>
+    </ul>
+  </div>
+  </nav>
+
+      <div class="submain">
+
+ <img class="img2" src="../assets/image/220-SM748384.jpg" alt="">
+
+
+<!-- carousel-end -->
+
+
+  </div>
+  <div class="footer p-5">
+    <div class="umsInfo">
+
+      <h5 class="ftext">
+        User Management System (UMS) : <br> 
+        User management system deals with the maintenance of university,collage,faculty, 
+        <br>
+        student information with in the university. UMS is an automation system,which is used <br>
+         to store the college,faculty,student ,course information of a college. 
+      </h5>
+    </div>
+
+  </div>
+
+<!-- Modal -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+
+<router-outlet></router-outlet>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
